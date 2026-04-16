@@ -1,0 +1,8 @@
+{
+    "nama": "Budi",
+    "umur": 25,
+    "alamat": {
+        "jalan": "Jl. Raya No. 123",
+        "kota": "Bandung"
+    }
+}
