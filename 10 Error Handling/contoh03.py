@@ -7,3 +7,4 @@ def pembilangan():
         print(f"Maaf, tidak bisa membagi dengan angka 0. {str(e)}")
     except ValueError as e:
         print(f"Maaf, input harus berupa angka. {str(e)}")
+print(pembilangan())

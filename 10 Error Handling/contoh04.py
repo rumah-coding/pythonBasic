@@ -7,3 +7,5 @@ def pembilangan():
         print(f"Maaf, tidak bisa membagi dengan angka 0. {str(e)}")
     finally:
         print("Selesai!")
+
+print(pembilangan() )
