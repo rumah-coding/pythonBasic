@@ -1,6 +1,8 @@
 
-# Sederhana 1: Menangani Salah Input Data
 try:
     nama = input("Masukkan Nama Anda: ")
-except ValueError:
+    int(nama )
     print("Maaf, nama tidak bisa diisi dengan angka.")
+
+except ValueError:
+    print("Haloo, " + nama + "! Selamat datang di dunia Python.")
