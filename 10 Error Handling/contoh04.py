@@ -1,11 +1,10 @@
-def pembilangan():
+def pembaca_file():
     try:
-        a = int(input("Masukkan Angka Pertama: "))
-        b = int(input("Masukkan Angka Kedua: "))
-        return a / b
-    except ZeroDivisionError as e:
-        print(f"Maaf, tidak bisa membagi dengan angka 0. {str(e)}")
+        with open('data.txt', 'r') as file:
+            isi = file.read()
+            return isi
+    except FileNotFoundError as e:
+        print(f"Maaf, file tidak ditemukan. {str(e)}")
     finally:
-        print("Selesai!")
-
-print(pembilangan() )
+        print("Selesai membaca file!")
+print(pembaca_file())   

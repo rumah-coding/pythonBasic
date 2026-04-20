@@ -1,9 +1,12 @@
-def pembaca_file():
+def cek_ketersediaan_file(file_name):
     try:
-        with open('nama_file.txt', 'r') as file:
+        with open(file_name, 'r') as file:
             isi = file.read()
-            return isi
-    except FileNotFoundError as e:
-        print(f"Maaf, file tidak ditemukan. {str(e)}")
-    finally:
-        print("Selesai membaca file!")
+            return isi,True
+    except FileNotFoundError:
+        return 'Tidak Ada Data',False
+
+def pembaca_file():
+    (data, tersedia) = cek_ketersediaan_file('data.txt')
+    print(data) 
+pembaca_file()
